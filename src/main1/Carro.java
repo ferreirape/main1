@@ -25,7 +25,7 @@ public class Carro {
         return dadosCarro;
     }
 
-    double getValorPorKm() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public double getValorPorKm() {
+        return valorPorKm;
     }
 }
