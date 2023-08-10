@@ -1,6 +1,7 @@
 package main1;
 
 import javax.swing.JOptionPane;
+import java.util.Locale;
 
 public class Aluguel {
     private Carro carro;
@@ -41,19 +42,26 @@ public class Aluguel {
     }
 
    public String mostrarResumoLocacao() {
+        
+        // Obtem as informações do cliente e do carro em forma de strings
+        String dadosCliente = cliente.mostrarDadosUsuario();
+        String dadosCarro = carro.mostrarDadosCarro();
+        
+        // Formatar o valor total do aluguel com duas casas decimais
+        String valorFormatado = String.format(Locale.US, "%.2f", valorTotalAluguel);
+       
         // Preparação da string com o resumo do aluguel
         String resumoLocacao = "Resumo Aluguel\n" +
             "Cliente\n" +
-            cliente.mostrarDadosUsuario() + "\n" +
+            dadosCliente + "\n" +
             "Carro\n" +
-            carro.mostrarDadosCarro() + "\n" +
+            dadosCarro + "\n" +
             "Aluguel\n" +
             "Quantidade de dias: " + qtdDias + "\n" +
             "Km Inicial: " + kmInicial + "\n" +
             "Km Final: " + kmFinal + "\n" +
-            "Valor Total: R$" + valorTotalAluguel + "\n";
+            "Valor Total: R$" + valorFormatado + "\n";
 
         return resumoLocacao;
     }
 }
-
