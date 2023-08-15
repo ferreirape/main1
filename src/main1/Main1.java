@@ -8,10 +8,10 @@ public class Main1 {
         aluguel.iniciarLocacao();
         aluguel.fecharLocacao();
 
-        // Obtém o resumo da locação
+        // Obtém o resumo da locação.
         String resumo = aluguel.mostrarResumoLocacao();
 
-        // Exibe o resumo em uma caixa de diálogo
+        // Exibe o resumo em uma caixa de diálogo.
         JOptionPane.showMessageDialog(null, resumo);
     }
 }
