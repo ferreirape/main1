@@ -1,5 +1,4 @@
 package main1;
-
 import javax.swing.JOptionPane;
 
 public class Cliente {
@@ -8,14 +7,14 @@ public class Cliente {
     private String telefone;
 
     public void cadastrarUsuario() {
-        // Leitura das informações através do JOptionPane
+        // Leitura das informações do cliente através do JOptionPane
         this.nome = JOptionPane.showInputDialog("Digite o nome do cliente:");
         this.cpf = JOptionPane.showInputDialog("Digite o CPF do cliente:");
         this.telefone = JOptionPane.showInputDialog("Digite o telefone do cliente:");
     }
 
     public String mostrarDadosUsuario() {
-        // Preparação da string para exibir as informações do cliente
+        // Preparação para exibir as informações do cliente
         String dadosUsuario = ""
                 + "Nome: " + nome + "\n"
                 + "CPF: " + cpf + "\n"

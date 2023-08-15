@@ -1,5 +1,4 @@
 package main1;
-
 import javax.swing.JOptionPane;
 
 public class Carro {
@@ -8,7 +7,7 @@ public class Carro {
     private double valorPorKm;
 
     public void cadastrarCarro() {
-        // Leitura das informações através do JOptionPane
+        // Leitura das informações do carro através do JOptionPane
         this.modelo = JOptionPane.showInputDialog("Digite o modelo do carro:");
         this.marca = JOptionPane.showInputDialog("Digite a marca do carro:");
         this.valorPorKm = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor por Km do carro:"));
@@ -20,7 +19,7 @@ public class Carro {
                           + "Marca: " + marca + "\n"
                           + "Valor por Km: " + valorPorKm + "\n";
 
-        // Exibição das informações através do JOptionPane
+        // Exibição das informações do carro através do JOptionPane
         JOptionPane.showMessageDialog(null, dadosCarro);
         return dadosCarro;
     }
